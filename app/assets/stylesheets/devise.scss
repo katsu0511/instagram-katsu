@@ -1,0 +1,71 @@
+@import 'variables';
+
+.devise_top {
+    background: linear-gradient(0deg, rgba(43, 43, 43, 0.1), rgba(43, 43, 43, 0.1)), url(devise);
+    background-size: cover;
+    width: 100%;
+    height: 298px;
+    margin-bottom: 33px;
+}
+
+form {
+    position: relative;
+
+    .field {
+        font-family: 'Poppins';
+        margin-top: 20px;
+
+        label {
+            font-size: 11px;
+            color: $gray;
+            line-height: 16px;
+        }
+
+        input {
+            font-size: 16px;
+            color: $base;
+            width: 100%;
+            line-height: 24px;
+            border: none;
+            border-bottom: 1px solid $border;
+            padding: 4px 10px 6px;
+            outline: none;
+            transition: all 0.3s;
+
+            &:hover, &:focus {
+                border-bottom: 1px solid $btn;
+            }
+        }
+    }
+
+    a {
+        position: absolute;
+        right: 0;
+        display: inline-block;
+        font-family: 'Poppins';
+        font-size: 14px;
+        color: #ccc;
+        margin-top: 16px;
+    }
+
+    .actions {
+        input {
+            background: $btn;
+            color: $base;
+            font-family: 'Poppins';
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
+            height: 48px;
+            border: none;
+            margin: 70px 0;
+            transition: all 0.3s;
+
+            &:hover {
+                background: orange;
+                cursor: pointer;
+            }
+        }
+    }
+}
