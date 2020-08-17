@@ -1,9 +1,9 @@
 <div class="inner">
   <h1 class="account_name"><%= current_user.account_name %></h1>
   <%= link_to '←', root_path, class: 'to_timeline' %>
-  <div class="profile_image">
+  <%= link_to edit_profile_path, class: 'profile_image' do %>
     <%= image_tag 'default' %>
-  </div>
+  <% end %>
   <div class="profile_infos">
     <div class="profile_info post">
       <span>44</span>
