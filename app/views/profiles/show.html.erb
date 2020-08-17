@@ -4,7 +4,7 @@
   <%= link_to '←', root_path, class: 'to_timeline' %>
 
   <%= link_to edit_profile_path, class: 'profile_image' do %>
-    <%= image_tag current_user.icon_image %>
+    <%= image_tag current_user.icon_image, class: 'profile_icon' %>
   <% end %>
 
   <div class="profile_infos">
