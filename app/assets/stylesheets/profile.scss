@@ -1,0 +1,98 @@
+@import 'variables';
+
+.inner {
+    position: relative;
+
+    .account_name {
+        font-size: 16px;
+        color: #333a42;
+        text-align: center;
+        line-height: 24px;
+        margin-top: 46px;
+    }
+
+    .to_timeline {
+        position: absolute;
+        top: 0;
+        font-size: 20px;
+        color: $base;
+    }
+
+    .profile_image {
+        display: block;
+        width: 77px;
+        height: 77px;
+        border-radius: 50%;
+        margin: 35px auto 46px;
+    }
+
+    .profile_infos {
+        display: flex;
+        justify-content: center;
+
+        .profile_info {
+            position: relative;
+            left: 10px;
+            text-align: center;
+
+            &.post {
+                margin-right: 39px;
+            }
+
+            &.follower {
+                margin-right: 31px;
+            }
+
+            span {
+                font-size: 16px;
+                color: #333a42;
+                line-height: 24px;
+            }
+
+            h2 {
+                font-size: 14px;
+                font-weight: 500;
+                color: $border;
+                line-height: 21px;
+            }
+        }
+    }
+
+    .photos_sec {
+        width: 343px;
+        margin: 42px auto 0;
+
+        .photos {
+            display: flex;
+            margin-bottom: 8px;
+
+            .big {
+                width: 207px;
+                height: 192px;
+            }
+
+            .small {
+                width: 128px;
+                height: 92px;
+
+                img {
+                    &:first-child {
+                        margin-bottom: 8px;
+                    }
+                }
+            }
+
+            &.photos1 {
+                .big {
+                    margin-right: 8px;
+                }
+            }
+
+            &.photos2 {
+                .big {
+                    margin-left: 8px;
+                }
+            }
+        }
+    }
+}

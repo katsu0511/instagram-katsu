@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'devise';
+@import 'profile';
 
 *,
 *::before,
@@ -22,7 +23,7 @@ body {
     -webkit-font-smoothing: antialiased;
     background: #fff;
     color: #333;
-    font-family: Avenir, "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
+    font-family: 'Poppins', 'Avenir', "メイリオ", 'Meiryo', "MS Pゴシック", "MS PGothic", sans-serif;
     font-size: 1.6rem;
     font-weight: 500;
     line-height: 1.6;
@@ -220,4 +221,12 @@ form button {
     color: red;
     font-size: 18px;
     font-weight: bold;
+}
+
+.under {
+    background: #252222;
+    width: 134px;
+    height: 5px;
+    border-radius: 100px;
+    margin: 80px auto 9px;
 }

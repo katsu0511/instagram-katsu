@@ -1,0 +1,42 @@
+<div class="inner">
+  <h1 class="account_name"><%= current_user.account_name %></h1>
+  <%= link_to '←', root_path, class: 'to_timeline' %>
+  <div class="profile_image">
+    <%= image_tag 'default' %>
+  </div>
+  <div class="profile_infos">
+    <div class="profile_info post">
+      <span>44</span>
+      <h2>Posts</h2>
+    </div>
+    <div class="profile_info follower">
+      <span>110</span>
+      <h2>Followers</h2>
+    </div>
+    <div class="profile_info following">
+      <span>44</span>
+      <h2>Following</h2>
+    </div>
+  </div>
+  <div class="photos_sec">
+    <div class="photos photos1">
+      <div class="big">
+        <%= image_tag 'photo1' %>
+      </div>
+      <div class="small">
+        <%= image_tag 'photo2' %>
+        <%= image_tag 'photo3' %>
+      </div>
+    </div>
+    <div class="photos photos2">
+      <div class="small">
+        <%= image_tag 'photo4' %>
+        <%= image_tag 'photo5' %>
+      </div>
+      <div class="big">
+        <%= image_tag 'photo6' %>
+      </div>
+    </div>
+  </div>
+  <div class="under"></div>
+</div>
