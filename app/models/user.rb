@@ -10,4 +10,12 @@ class User < ApplicationRecord
   def prepare_profile
     profile || build_profile
   end
+
+  def icon_image
+    if profile&.icon&.attached?
+      profile.icon
+    else
+      'default'
+    end
+  end
 end
