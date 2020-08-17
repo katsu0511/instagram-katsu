@@ -8,8 +8,8 @@
   <%= form_with model: @profile, url: profile_path, method: 'put', local: true do |f| %>
 
     <div class="field">
-      <label class="avatar">Icon</label>
-      <%= f.file_field :avatar, class: 'image_input' %>
+      <label class="icon">Icon</label>
+      <%= f.file_field :icon, class: 'image_input' %>
     </div>
 
     <div class="actions">

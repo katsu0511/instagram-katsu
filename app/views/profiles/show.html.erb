@@ -1,9 +1,16 @@
 <div class="inner">
   <h1 class="account_name"><%= current_user.account_name %></h1>
+
   <%= link_to '←', root_path, class: 'to_timeline' %>
+
   <%= link_to edit_profile_path, class: 'profile_image' do %>
-    <%= image_tag 'default' %>
+    <% if current_user.profile %>
+      <%= image_tag current_user.profile.icon %>
+    <% else %>
+      <%= image_tag 'default' %>
+    <% end %>
   <% end %>
+
   <div class="profile_infos">
     <div class="profile_info post">
       <span>44</span>
@@ -18,6 +25,7 @@
       <h2>Following</h2>
     </div>
   </div>
+
   <div class="photos_sec">
     <div class="photos photos1">
       <div class="big">
@@ -39,5 +47,6 @@
     </div>
   </div>
   <div class="under"></div>
+  
   <%= javascript_pack_tag 'profile' %>
 </div>
