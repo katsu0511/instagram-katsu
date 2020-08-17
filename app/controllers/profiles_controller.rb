@@ -5,5 +5,6 @@ class ProfilesController < ApplicationController
   end
 
   def edit
+    @profile = current_user.prepare_profile
   end
 end
