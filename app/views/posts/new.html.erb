@@ -1,1 +1,32 @@
-<h1>Post new</h1>
+<div class="inner">
+
+  <% @post.errors.full_messages.each do |message| %>
+    <p class="error_message"><%= message %></p>
+  <% end %>
+
+  <%= form_with model: @post, url: posts_path, method: :post, local: true do |f| %>
+
+    <div class="form_header">
+      <%= link_to 'Cancel', root_path %>
+      <h1>Status</h1>
+      <div class="actions">
+        <%= f.submit :Post %>
+      </div>
+    </div>
+
+    <div class="user_ui">
+      <%= image_tag current_user.icon_image %>
+      <%= current_user.account_name %>
+    </div>
+
+    <div class="field">
+      <%= f.text_field :content, placeholder: 'What\'s on your mind?'  %>
+    </div>
+
+    <div class="field">
+      <%= f.file_field :photos %>
+    </div>
+
+  <% end %>
+
+</div>
