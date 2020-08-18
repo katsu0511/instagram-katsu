@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   root to: 'timelines#show'
 
   resource :profile, only: [:show, :edit, :update]
+
+  resources :posts, only: [:new, :create]
 end
