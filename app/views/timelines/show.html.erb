@@ -1,2 +1,10 @@
-<h2>timeline</h2>
-<%= link_to 'Profile', profile_path %>
+
+<div class="inner">
+  <%= link_to new_post_path do %>
+    <i class="fas fa-camera"></i>
+  <% end %>
+
+  <%= link_to profile_path do %>
+    <i class="fas fa-arrow-right"></i>
+  <% end %>
+</div>
