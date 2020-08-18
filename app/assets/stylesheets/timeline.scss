@@ -1,0 +1,11 @@
+@import 'variables';
+
+.timeline_header {
+    display: flex;
+    justify-content: space-between;
+
+    a {
+        display: inline-block;
+        font-size: 18px;
+    }
+}
