@@ -1,0 +1,70 @@
+@import 'variables';
+
+form {
+    .form_header {
+        display: flex;
+        justify-content: space-between;
+        font-family: 'Poppins';
+        height: 24px;
+        margin-bottom: 40px;
+
+        .post_cancel {
+            position: relative;
+            font-size: 16px;
+            color: $blue;
+            height: auto;
+            line-height: 24px;
+            margin-top: 0;
+        }
+
+        h1 {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333a42;
+            line-height: 24px;
+        }
+
+        .post_btn {
+            display: inline-block;
+            background: transparent;
+            color: #bdbdbd;
+            height: 24px;
+            line-height: 1;
+            margin: 0;
+
+            &:hover {
+                background: transparent;
+            }
+        }
+    }
+
+    .user_ui {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 40px;
+            height: 40px;
+            margin-right: 18px;
+        }
+
+        p {
+            font-family: 'Poppins';
+            font-size: 16px;
+            color: $base;
+            line-height: 24px;
+        }
+    }
+
+    .post_content {
+        font-family: 'Poppins';
+        font-size: 16px;
+        color: #bdbdbd;
+        line-height: 24px;
+        opacity: 0.9;
+    }
+
+    .post_photos {
+        border-bottom: none;
+    }
+}
