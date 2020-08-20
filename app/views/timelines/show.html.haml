@@ -4,3 +4,24 @@
       %i.fas.fa-camera
     = link_to profile_path do
       %i.fas.fa-arrow-right
+  
+  .timeline_body
+    - @posts.each do |post|
+      .timeline_post
+        = link_to profile_path do
+          .timeline_post_icon
+            = image_tag current_user.icon_image
+          .timeline_post_name
+            = current_user.account_name
+            = post.created_at
+        .timeline_post_images
+          = image_tag post.photos
+        .share
+          = image_tag 'heart'
+          = link_to root_path do
+            %i.far.fa-comment
+          = link_to root_path do
+            %i.fas.fa-share-alt
+        .timeline_post_content
+          = current_user.account_name
+          = post.content
