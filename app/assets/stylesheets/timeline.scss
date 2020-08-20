@@ -3,9 +3,88 @@
 .timeline_header {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 46px;
 
     a {
         display: inline-block;
         font-size: 18px;
+    }
+}
+
+.timeline_body {
+    .timeline_post {
+        width: 100%;
+        margin-bottom: 36px;
+
+        &_top {
+            display: flex;
+            align-items: center;
+            margin-bottom: 11px;
+
+            &_icon {
+                width: 30px;
+                height: 30px;
+                margin-right: 8px;
+            }
+            &_name {
+                font-family: 'Poppins';
+
+                .post_author {
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: $base;
+                    line-height: 21px;
+                }
+                .post_created {
+                    font-size: 12px;
+                    color: $gray;
+                    line-height: 18px;
+                }
+            }
+        }
+
+        &_images {
+            img {
+                width: 100%;
+                height: auto;
+                margin-bottom: 13px;
+            }
+        }
+
+        .share {
+            display: flex;
+            margin-bottom: 9px;
+
+            img {
+                position: absolute;
+                width: 16px;
+                transition: all 0.3s;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            i {
+                display: block;
+                font-size: 16px;
+                margin-right: 14px;
+
+                &.fa-comment {
+                    margin-left: 30px;
+                }
+            }
+        }
+        &_content {
+            display: flex;
+            font-family: 'Poppins';
+            font-size: 12px;
+            color: $base;
+            line-height: 18px;
+
+            .post_name {
+                font-weight: bold;
+                margin-right: 10px;
+            }
+        }
     }
 }
