@@ -25,6 +25,7 @@ gem 'aws-sdk-s3', require: false
 gem 'devise'
 gem 'active_model_serializers'
 gem 'hamlit'
+gem 'annotate'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
