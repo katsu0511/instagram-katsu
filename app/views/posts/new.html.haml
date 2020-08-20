@@ -11,6 +11,10 @@
       = image_tag current_user.icon_image
       %p= current_user.account_name
     .field
+      %label.content
+        Content
       = f.text_field :content, class: 'post_content', placeholder: 'What\'s on your mind?'
     .field
+      %label.photos
+        Photos
       = f.file_field :photos, multiple: true, class: 'post_photos'
