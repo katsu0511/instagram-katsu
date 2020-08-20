@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = current_user.posts.build(posts_params)
+    @post = current_user.posts.build(post_params)
     if @post.save
       redirect_to root_path, notice: 'Successfully posted!'
     else
@@ -14,10 +14,10 @@ class PostsController < ApplicationController
   end
 
   private
-  def posts_params
+  def post_params
     params.require(:post).permit(
       :content,
-      :photos
+      {photos: []}
     )
   end
 end

@@ -17,7 +17,8 @@
             .post_created
               = post.created_at
         .timeline_post_images
-          = image_tag post.photos
+          - post.photos.each do |photo|
+            = image_tag photo
         .share
           = image_tag 'heart'
           = link_to root_path do
