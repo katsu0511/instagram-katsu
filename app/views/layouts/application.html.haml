@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title InstagramApp
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+    %link{:href => "https://use.fontawesome.com/releases/v5.8.2/css/all.css?ver=5.8.2", :rel => "stylesheet"}/
+  %body
+    - if notice.present?
+      %p.notice= notice
+    - if alert.present?
+      %p.alert= alert
+    = yield
