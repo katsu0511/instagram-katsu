@@ -1,0 +1,20 @@
+.devise_top
+.inner
+  = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    = render "devise/shared/error_messages", resource: resource
+    .field
+      = f.label :account
+      %br/
+      = f.text_field :account_name, autofocus: true, autocomplete: "account"
+    .field
+      = f.label :email
+      %br/
+      = f.email_field :email, autofocus: true, autocomplete: "email"
+    .field
+      = f.label :password
+      %br/
+      = f.password_field :password, autocomplete: "new-password"
+    = render "devise/shared/links"
+    .actions
+      = f.submit "CREATE ACCOUNT"
+  .under

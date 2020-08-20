@@ -1,0 +1,10 @@
+.inner
+  %ul
+    - @profile.errors.full_messages.each do |message|
+      %li.error_message= message
+  = form_with model: @profile, url: profile_path, method: 'put', local: true do |f|
+    .field
+      %label.icon Icon
+      = f.file_field :icon, class: 'image_input'
+    .actions
+      = f.submit :Submit
