@@ -8,12 +8,14 @@
   .timeline_body
     - @posts.each do |post|
       .timeline_post
-        = link_to profile_path do
-          .timeline_post_icon
+        = link_to profile_path, class: 'timeline_post_top' do
+          .timeline_post_top_icon
             = image_tag current_user.icon_image
-          .timeline_post_name
-            = current_user.account_name
-            = post.created_at
+          .timeline_post_top_name
+            .post_author
+              = current_user.account_name
+            .post_created
+              = post.created_at
         .timeline_post_images
           = image_tag post.photos
         .share
@@ -23,5 +25,6 @@
           = link_to root_path do
             %i.fas.fa-share-alt
         .timeline_post_content
-          = current_user.account_name
+          %p.post_name
+            = current_user.account_name
           = post.content
