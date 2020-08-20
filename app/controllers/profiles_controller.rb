@@ -2,6 +2,7 @@ class ProfilesController < ApplicationController
   before_action :forbid_logout_user
 
   def show
+    raise StandardError
   end
 
   def edit
