@@ -14,6 +14,7 @@
 #
 class Post < ApplicationRecord
   has_many_attached :photos
+  has_many :likes, dependent: :destroy
 
   belongs_to :user
 end
