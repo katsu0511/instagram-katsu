@@ -20,8 +20,11 @@
           - post.photos.each do |photo|
             = image_tag photo
         .share
-          = link_to post_like_path(post), data: { method: 'post' } do
-            = image_tag 'unheart'
+          - if current_user.has_liked?(post)
+            = image_tag 'heart'
+          - else
+            = link_to post_like_path(post), data: { method: 'post' } do
+              = image_tag 'unheart'
           = link_to root_path do
             %i.far.fa-comment
           = link_to 'https://twitter.com/share?ref_src=twsrc%5Etfw', target: '_blank' do
