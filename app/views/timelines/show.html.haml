@@ -20,6 +20,7 @@
           - post.photos.each do |photo|
             = image_tag photo
         .share
+          = image_tag 'unheart'
           = image_tag 'heart'
           = link_to root_path do
             %i.far.fa-comment
