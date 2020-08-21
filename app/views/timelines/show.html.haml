@@ -21,7 +21,8 @@
             = image_tag photo
         .share
           - if current_user.has_liked?(post)
-            = image_tag 'heart'
+            = link_to post_like_path(post), data: { method: 'delete' } do
+              = image_tag 'heart'
           - else
             = link_to post_like_path(post), data: { method: 'post' } do
               = image_tag 'unheart'
