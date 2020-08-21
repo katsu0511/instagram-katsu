@@ -16,7 +16,7 @@
               = current_user.account_name
             .post_created
               = post.created_at
-        .timeline_post_images
+        = link_to post_path(post.id), class: 'timeline_post_images' do
           - post.photos.each do |photo|
             = image_tag photo
         .share
