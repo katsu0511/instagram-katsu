@@ -34,4 +34,26 @@ document.addEventListener('DOMContentLoaded', () => {
       const hasLiked = response.data.hasLiked
       handleHeartDisplay(hasLiked)
     })
+
+  $('.inactive-heart').on('click', () => {
+    axios.post(`/posts/${postId}/like`)
+      .then((response) => {
+        console.log(response)
+      })
+      .catch((e) => {
+        window.alert('Error')
+        console.log(e)
+      })
+  })
+
+  $('.active-heart').on('click', () => {
+    axios.delete(`/posts/${postId}/like`)
+      .then((response) => {
+        console.log(response)
+      })
+      .catch((e) => {
+        window.alert('Error')
+        console.log(e)
+      })
+  })
 })

@@ -14,10 +14,8 @@
           - @post.photos.each do |photo|
             = image_tag photo
         .share
-          = link_to post_like_path(@post), data: { method: 'delete' }, class: 'hidden active-heart' do
-            = image_tag 'heart'
-          = link_to post_like_path(@post), data: { method: 'post' }, class: 'hidden inactive-heart' do
-            = image_tag 'unheart'
+          = image_tag 'heart', class: 'hidden active-heart'
+          = image_tag 'unheart', class: 'hidden inactive-heart'
           = link_to root_path do
             %i.far.fa-comment
           = link_to 'https://twitter.com/share?ref_src=twsrc%5Etfw', target: '_blank' do
