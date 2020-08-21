@@ -7,7 +7,7 @@
   
   .timeline_body
     - @posts.each do |post|
-      .timeline_post
+      .timeline_post#post-show{data: {post_id: post.id}}
         = link_to profile_path, class: 'timeline_post_top' do
           .timeline_post_top_icon
             = image_tag current_user.icon_image
@@ -20,12 +20,10 @@
           - post.photos.each do |photo|
             = image_tag photo
         .share
-          - if current_user.has_liked?(post)
-            = link_to post_like_path(post), data: { method: 'delete' } do
-              = image_tag 'heart'
-          - else
-            = link_to post_like_path(post), data: { method: 'post' } do
-              = image_tag 'unheart'
+          = link_to post_like_path(post), data: { method: 'delete' }, class: 'hidden active-heart' do
+            = image_tag 'heart'
+          = link_to post_like_path(post), data: { method: 'post' }, class: 'hidden inactive-heart' do
+            = image_tag 'unheart'
           = link_to root_path do
             %i.far.fa-comment
           = link_to 'https://twitter.com/share?ref_src=twsrc%5Etfw', target: '_blank' do
