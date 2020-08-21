@@ -74,6 +74,18 @@
                 }
             }
         }
+        &_likes {
+            display: flex;
+            font-family: 'Poppins';
+            font-size: 12px;
+            font-weight: bold;
+            color: $base;
+            line-height: 18px;
+
+            .post_likes {
+                margin-right: 5px;
+            }
+        }
         &_content {
             display: flex;
             font-family: 'Poppins';
