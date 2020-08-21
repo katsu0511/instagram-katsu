@@ -16,3 +16,12 @@ require("channels")
 
 import $ from 'jquery'
 import axios from 'modules/axios'
+
+document.addEventListener('DOMContentLoaded', () => {
+  const dataset = $('#post-show').data()
+  const postId = dataset.postId
+  axios.get(`/posts/${postId}/like`)
+    .then((response) => {
+      console.log(response)
+    })
+})
