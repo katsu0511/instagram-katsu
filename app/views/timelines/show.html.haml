@@ -31,6 +31,7 @@
           = link_to 'https://twitter.com/share?ref_src=twsrc%5Etfw', target: '_blank' do
             %i.fas.fa-share-alt
         .timeline_post_content
+          %p.post_likes= post.likes.count
           %p.post_name
             = current_user.account_name
           = post.content
