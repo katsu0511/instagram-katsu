@@ -18,11 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const comments = response.data
       comments.forEach((comment) => {
         $('.comments_container').append(
-          `<div class="article_comment"><p>${comment.content}</p></div>`
+          `<div class="article_comment">
+            <p>${comment.content}</p>
+           </div>`
         )
       })
     })
-  
+
   axios.get(`/posts/${postId}/like`)
     .then((response) => {
       const hasLiked = response.data.hasLiked
