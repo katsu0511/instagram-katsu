@@ -14,4 +14,48 @@
       %p.notice= notice
     - if alert.present?
       %p.alert= alert
+    %header
+      .inner
+        - if current_page?(new_user_session_path)
+          .header_left 9:41
+          .header_right
+            %i.fas.fa-signal
+            %i.fas.fa-wifi
+            %i.fas.fa-battery-full
+        - elsif current_page?(new_user_password_path)
+          .header_left 9:41
+          .header_right
+            %i.fas.fa-signal
+            %i.fas.fa-wifi
+            %i.fas.fa-battery-full
+        - elsif current_page?(edit_user_password_path)
+          .header_left 9:41
+          .header_right
+            %i.fas.fa-signal
+            %i.fas.fa-wifi
+            %i.fas.fa-battery-full
+        - elsif current_page?(cancel_user_registration_path)
+          .header_left 9:41
+          .header_right
+            %i.fas.fa-signal
+            %i.fas.fa-wifi
+            %i.fas.fa-battery-full
+        - elsif current_page?(new_user_registration_path)
+          .header_left 9:41
+          .header_right
+            %i.fas.fa-signal
+            %i.fas.fa-wifi
+            %i.fas.fa-battery-full
+        - elsif current_page?(edit_user_registration_path)
+          .header_left 9:41
+          .header_right
+            %i.fas.fa-signal
+            %i.fas.fa-wifi
+            %i.fas.fa-battery-full
+        - else
+          .header_left.header_left_black 9:41
+          .header_right.header_right_black
+            %i.fas.fa-signal
+            %i.fas.fa-wifi
+            %i.fas.fa-battery-full
     = yield
