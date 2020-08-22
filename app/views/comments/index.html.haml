@@ -13,3 +13,5 @@
         .comment_contents
           %p.comment_contents_name= comment.user.account_name
           %p.comment_contents_content= comment.content
+  = link_to new_post_comment_path(params[:post_id]), class: 'comment_new' do
+    %i.far.fa-comment
