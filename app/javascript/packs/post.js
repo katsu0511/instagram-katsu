@@ -12,6 +12,16 @@ const handleHeartDisplay = (hasLiked) => {
 document.addEventListener('DOMContentLoaded', () => {
   const dataset = $('#post-show').data()
   const postId = dataset.postId
+
+  axios.get(`/posts/${postId}/comments`)
+    .then((response) => {
+      const comments = response.data
+      comments.forEach((comment) => {
+        $('.comments_container').append(
+          `<div class="article_comment"><p>${comment.content}</p></div>`
+        )
+      })
+    })
   
   axios.get(`/posts/${postId}/like`)
     .then((response) => {
