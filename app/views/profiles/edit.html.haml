@@ -2,6 +2,8 @@
   %ul
     - @profile.errors.full_messages.each do |message|
       %li.error_message= message
+  .to_profile
+    = link_to 'Cancel', profile_path
   = form_with model: @profile, url: profile_path, method: 'put', local: true do |f|
     .field
       %label.icon Icon

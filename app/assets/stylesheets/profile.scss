@@ -3,6 +3,13 @@
 .inner {
     position: relative;
 
+    .to_profile {
+        position: relative;
+        font-size: 16px;
+        color: $blue;
+        line-height: 24px;
+    }
+
     .account_name {
         font-size: 16px;
         color: #333a42;
