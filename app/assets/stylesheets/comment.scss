@@ -1,0 +1,36 @@
+@import 'variables';
+
+.comment_new {
+    display: block;
+    background: #fff;
+    width: 100%;
+    height: 42px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+    transition: all 0.3s;
+
+    &:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    i {
+        font-size: 19px;
+        line-height: 42px;
+        margin-left: 21px;
+    }
+
+    span {
+        font-size: 19px;
+        line-height: 42px;
+        margin-left: 21px;
+    }
+}
+
+.comment_text_area {
+    textarea {
+        background: #fff;
+        width: 100%;
+        height: 160px;
+        outline: none;
+    }
+}

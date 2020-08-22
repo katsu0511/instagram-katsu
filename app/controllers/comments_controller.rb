@@ -1,7 +1,9 @@
 class CommentsController < ApplicationController
+
   def index
     post = Post.find(params[:post_id])
-    @comments = post.comments
+    comments = post.comments
+    render json: comments
   end
 
   def new
@@ -13,13 +15,9 @@ class CommentsController < ApplicationController
     post = Post.find(params[:post_id])
     @comment = post.comments.build(comment_params)
     @comment.user_id = current_user.id
+    @comment.save!
 
-    if @comment.save
-      redirect_to post_comments_path(post), notice: 'Successfully posted a comment!'
-    else
-      flash.now[:error] = 'Failed to post'
-      render :new
-    end
+    render json: @comment
   end
 
   private

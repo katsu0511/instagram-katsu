@@ -31,4 +31,16 @@
           %p.post_name= current_user.account_name
           %p.post_content= @post.content
 
+        .comments_header
+          %h1 Comments
+        .comments_container
+
+        .comment_new.show_comment_form
+          %i.far.fa-comment
+        .comment_text_area.hidden
+          = text_area_tag :comment_content, ''
+          .comment_new.add_comment_btn
+            %span コメントを追加
+
+
 = javascript_pack_tag 'post'
