@@ -9,6 +9,19 @@ const handleHeartDisplay = (hasLiked) => {
   }
 }
 
+const handleCommentForm = () => {
+  $('.show_comment_form').on('click', () => {
+    $('.show_comment_form').addClass('hidden')
+    $('.comment_text_area').removeClass('hidden')
+  })
+}
+
+const appendNewComment = (comment) => {
+  $('.comments_container').append(
+    `<div class="post_comment"><p>${comment.content}</p></div>`
+  )
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const dataset = $('#post-show').data()
   const postId = dataset.postId
@@ -17,18 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
     .then((response) => {
       const comments = response.data
       comments.forEach((comment) => {
-        $('.comments_container').append(
-          `<div class="post_comment">
-            <p>${comment.content}</p>
-           </div>`
-        )
+        appendNewComment(comment)
       })
     })
 
-  $('.show_comment_form').on('click', () => {
-    $('.show_comment_form').addClass('hidden')
-    $('.comment_text_area').removeClass('hidden')
-  })
+    handleCommentForm()
 
   $('.add_comment_btn').on('click', () => {
     const content = $('#comment_content').val()
@@ -40,11 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
       })
         .then((res) => {
           const comment = res.data
-          $('.comments_container').append(
-            `<div class="post_comment">
-              <p>${comment.content}</p>
-             </div>`
-          )
+          appendNewComment(comment)
           $('#comment_content').val('')
        })
     }
