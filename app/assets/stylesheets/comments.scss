@@ -1,0 +1,78 @@
+.inner {
+    .comment_header {
+        position: relative;
+        height: 50px;
+
+        .comment_header_left {
+            position: absolute;
+            left: 0;
+
+            .comment_header_link {
+                font-size: 20px;
+                color: $base;
+                line-height: 50px;
+            }
+        }
+
+        h1 {
+            font-size: 24px;
+            color: $base;
+            text-align: center;
+            line-height: 50px;
+        }
+    }
+
+    .comments_container {
+        margin-top: 20px;
+
+        .comment {
+            display: flex;
+            margin-top: 32px;
+
+            .comment_user_image {
+                margin: 5px 14px 0 0;
+
+                img {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+
+            .comment_contents {
+                font-family: 'Poppins';
+
+                &_name {
+                    font-size: 16px;
+                    color: #9b9b9b;
+                    line-height: 24px;
+                }
+                &_content {
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: #414040;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+    .comment_new {
+        display: block;
+        position: fixed;
+        bottom: 20px;
+        background: #fff;
+        width: calc(100% - 34px);
+        height: 42px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s;
+
+        &:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        i {
+            font-size: 19px;
+            line-height: 42px;
+            margin-left: 21px;
+        }
+    }
+}
