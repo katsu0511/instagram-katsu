@@ -1,24 +1,13 @@
 .inner {
-    .comment_header {
+    .comments_header {
         position: relative;
         height: 50px;
-
-        .comment_header_left {
-            position: absolute;
-            left: 0;
-
-            .comment_header_link {
-                font-size: 20px;
-                color: $base;
-                line-height: 50px;
-            }
-        }
 
         h1 {
             font-size: 24px;
             color: $base;
-            text-align: center;
             line-height: 50px;
+            margin: 10px 0 100px;
         }
     }
 
