@@ -20,7 +20,7 @@
         .share
           = image_tag 'heart', class: 'hidden active-heart'
           = image_tag 'unheart', class: 'hidden inactive-heart'
-          = link_to root_path do
+          = link_to post_comments_path(@post.id) do
             %i.far.fa-comment
           = link_to 'https://twitter.com/share?ref_src=twsrc%5Etfw', target: '_blank' do
             %i.fas.fa-share-alt

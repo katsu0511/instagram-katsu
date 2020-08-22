@@ -1,0 +1,58 @@
+.inner {
+    .comment_header {
+        position: relative;
+        height: 50px;
+
+        .comment_header_left {
+            position: absolute;
+            left: 0;
+
+            .comment_header_link {
+                font-size: 20px;
+                color: $base;
+                line-height: 50px;
+            }
+        }
+
+        h1 {
+            font-size: 24px;
+            color: $base;
+            text-align: center;
+            line-height: 50px;
+        }
+    }
+
+    .comments_container {
+        margin-top: 20px;
+
+        .comment {
+            display: flex;
+            margin-top: 32px;
+
+            .comment_user_image {
+                margin: 5px 14px 0 0;
+
+                img {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+
+            .comment_contents {
+                font-family: 'Poppins';
+
+                &_name {
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #414040;
+                    line-height: 24px;
+                }
+                &_content {
+                    font-size: 14px;
+                    color: #9b9b9b;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+}
