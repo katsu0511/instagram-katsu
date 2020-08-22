@@ -1,3 +1,5 @@
+@import 'variables';
+
 .inner {
     .comments_header {
         position: relative;
@@ -42,25 +44,6 @@
                     line-height: 20px;
                 }
             }
-        }
-    }
-    .comment_new {
-        display: block;
-        background: #fff;
-        width: calc(100% - 34px);
-        height: 42px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        margin-bottom: 20px;
-        transition: all 0.3s;
-
-        &:hover {
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-        }
-
-        i {
-            font-size: 19px;
-            line-height: 42px;
-            margin-left: 21px;
         }
     }
 }

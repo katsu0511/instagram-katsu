@@ -34,15 +34,13 @@
         .comments_header
           %h1 Comments
         .comments_container
-          -# - @post.comments.each do |comment|
-          -#   .comment
-          -#     .comment_user_image
-          -#       = image_tag comment.user.icon_image
-          -#     .comment_contents
-          -#       %p.comment_contents_name= comment.user.account_name
-          -#       %p.comment_contents_content= comment.content
 
-        = link_to new_post_comment_path(@post), class: 'comment_new' do
+        .comment_new.show_comment_form
           %i.far.fa-comment
+        .comment_text_area.hidden
+          = text_area_tag :comment_content, ''
+          .comment_new
+            %span コメントを追加
+
 
 = javascript_pack_tag 'post'

@@ -25,6 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     })
 
+  $('.show_comment_form').on('click', () => {
+    $('.show_comment_form').addClass('hidden')
+    $('.comment_text_area').removeClass('hidden')
+  })
+
   axios.get(`/posts/${postId}/like`)
     .then((response) => {
       const hasLiked = response.data.hasLiked
