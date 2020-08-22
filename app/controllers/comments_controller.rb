@@ -11,7 +11,7 @@ class CommentsController < ApplicationController
     @comment.user_id = current_user.id
 
     if @comment.save
-      redirect_to post_comments_path(post), notice: 'Successfully posted a comment!'
+      redirect_to post_path(post), notice: 'Successfully posted a comment!'
     else
       flash.now[:error] = 'Failed to post'
       render :new
