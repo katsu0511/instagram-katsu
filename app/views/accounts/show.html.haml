@@ -5,5 +5,8 @@
     %i.fas.fa-stream
   .profile_image.account_image
     = image_tag @user.icon_image, class: 'profile_icon'
-    = link_to 'Follow', destroy_user_session_path, class: 'follow-btn'
+    - if current_user&.has_followed?(@user)
+      %p.follow-btn フォロー済み
+    - else
+      = link_to 'Follow', account_follows_path(@user), data: {method: 'post'}, class: 'follow-btn'
   = render 'commons/profile'

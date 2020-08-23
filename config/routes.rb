@@ -10,7 +10,9 @@ Rails.application.routes.draw do
 
   resource :profile, only: [:show, :edit, :update]
 
-  resources :accounts, only: [:show]
+  resources :accounts, only: [:show] do
+    resources :follows, only: [:create]
+  end
 
   resources :posts, only: [:show, :new, :create] do
     resources :comments, only: [:index, :new, :create]
