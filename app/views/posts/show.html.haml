@@ -6,7 +6,7 @@
           = link_to root_path do
             %i.fas.fa-arrow-left
             %i.fas.fa-stream
-        = link_to profile_path, class: 'timeline_post_top' do
+        = link_to account_path, class: 'timeline_post_top' do
           .timeline_post_top_icon
             = image_tag @post.user.icon_image
           .timeline_post_top_name

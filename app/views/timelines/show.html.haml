@@ -9,7 +9,7 @@
   .timeline_body
     - @posts.each do |post|
       .timeline_post#post-show{data: {post_id: post.id}}
-        = link_to profile_path, class: 'timeline_post_top' do
+        = link_to account_path(post.user), class: 'timeline_post_top' do
           .timeline_post_top_icon
             = image_tag post.user.icon_image
           .timeline_post_top_name
