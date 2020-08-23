@@ -1,7 +1,6 @@
 class CommentMailer < ApplicationMailer
-  def new_comment(user, post)
+  def new_comment(user)
     @user = user
-    @post = post
     mail to: user.email, subject: '【お知らせ】コメントを追加しました'
   end
 end

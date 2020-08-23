@@ -19,4 +19,11 @@ class Comment < ApplicationRecord
 
   belongs_to :user
   belongs_to :post
+
+  after_create :send_email
+
+  private
+  def send_email
+    CommentMailer.new_comment(@comment.user).deliver.now
+  end
 end
