@@ -1,4 +1,5 @@
 class LikesController < ApplicationController
+  before_action :forbid_logout_user
 
   def show
     post = Post.find(params[:post_id])
