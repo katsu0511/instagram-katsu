@@ -57,6 +57,12 @@
         }
     }
 
+    .account_image {
+        &:hover {
+            box-shadow: 0 0 0 3px white, 0 0 0 6px rgb(255, 0, 140);
+        }
+    }
+
     .profile_infos {
         display: flex;
         justify-content: center;

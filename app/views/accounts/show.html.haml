@@ -1,1 +1,9 @@
-= @user.email
+.inner
+  %h1.account_name= @user.account_name
+  = link_to root_path, class: 'to_timeline' do
+    %i.fas.fa-arrow-left
+    %i.fas.fa-stream
+  = link_to 'Follow', destroy_user_session_path
+  .profile_image.account_image
+    = image_tag @user.icon_image, class: 'profile_icon'
+  = render 'commons/profile'
