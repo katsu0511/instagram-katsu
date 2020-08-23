@@ -44,22 +44,46 @@
     }
 
     .profile_image {
-        display: block;
-        width: 77px;
-        height: 77px;
-        border-radius: 50%;
-        box-shadow: 0 0 0 3px white, 0 0 0 6px rgb(255, 0, 140);
-        margin: 35px auto 46px;
-        transition: all 0.3s;
+        img {
+            display: block;
+            width: 77px;
+            height: 77px;
+            border-radius: 50%;
+            box-shadow: 0 0 0 3px white, 0 0 0 6px rgb(255, 0, 140);
+            margin: 35px auto 46px;
+            transition: all 0.3s;
 
-        &:hover {
-            box-shadow: 0 0 0 3px white, 0 0 0 6px rgb(255, 0, 140), 0 5px 20px $base;
+            &:hover {
+                box-shadow: 0 0 0 3px white, 0 0 0 6px rgb(255, 0, 140), 0 5px 20px $base;
+            }
         }
     }
 
     .account_image {
-        &:hover {
-            box-shadow: 0 0 0 3px white, 0 0 0 6px rgb(255, 0, 140);
+        position: relative;
+
+        img {
+            &:hover {
+                box-shadow: 0 0 0 3px white, 0 0 0 6px rgb(255, 0, 140);
+            }
+        }
+
+        .follow-btn {
+            display: block;
+            position: absolute;
+            top: 25px;
+            left: calc(50% + 80px);
+            background: $btn;
+            color: $base;
+            border: 1px solid $btn;
+            border-radius: 10px;
+            padding: 5px 10px 3px;
+            transition: all 0.3s;
+
+            &:hover {
+                top: 20px;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+            }
         }
     }
 

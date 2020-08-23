@@ -3,7 +3,7 @@
   = link_to root_path, class: 'to_timeline' do
     %i.fas.fa-arrow-left
     %i.fas.fa-stream
-  = link_to 'Follow', destroy_user_session_path
   .profile_image.account_image
     = image_tag @user.icon_image, class: 'profile_icon'
+    = link_to 'Follow', destroy_user_session_path, class: 'follow-btn'
   = render 'commons/profile'
