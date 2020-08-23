@@ -1,0 +1,12 @@
+.inner
+  %h1.account_name= @user.account_name
+  = link_to root_path, class: 'to_timeline' do
+    %i.fas.fa-arrow-left
+    %i.fas.fa-stream
+  .profile_image.account_image
+    = image_tag @user.icon_image, class: 'profile_icon'
+    - if current_user&.has_followed?(@user)
+      = link_to 'Unfollow', account_unfollows_path(@user), data: {method: 'post'}, class: 'follow-btn'
+    - else
+      = link_to 'Follow', account_follows_path(@user), data: {method: 'post'}, class: 'follow-btn'
+  = render 'commons/profile'

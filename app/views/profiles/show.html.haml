@@ -6,28 +6,4 @@
   = link_to 'LOG OUT', destroy_user_session_path, data: {method: 'delete'}, class: 'logout_btn'
   = link_to edit_profile_path, class: 'profile_image' do
     = image_tag current_user.icon_image, class: 'profile_icon'
-  .profile_infos
-    .profile_info.post
-      %span 44
-      %h2 Posts
-    .profile_info.follower
-      %span 110
-      %h2 Followers
-    .profile_info.following
-      %span 44
-      %h2 Following
-  .photos_sec
-    .photos.photos1
-      .big
-        = image_tag 'photo1'
-      .small
-        = image_tag 'photo2'
-        = image_tag 'photo3'
-    .photos.photos2
-      .small
-        = image_tag 'photo4'
-        = image_tag 'photo5'
-      .big
-        = image_tag 'photo6'
-  .under
-  = javascript_pack_tag 'profile'
+  = render 'commons/profile'
