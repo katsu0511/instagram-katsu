@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  before_action :forbid_logout_user
 
   def index
     post = Post.find(params[:post_id])
