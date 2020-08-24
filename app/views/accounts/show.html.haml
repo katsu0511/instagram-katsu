@@ -6,7 +6,7 @@
   .profile_image.account_image
     = image_tag @user.icon_image, class: 'profile_icon'
     - if current_user&.has_followed?(@user)
-      = link_to 'Unfollow', account_unfollows_path(@user), data: {method: 'post'}, class: 'follow-btn'
+      = link_to 'Unfollow', account_unfollows_path(@user), data: {method: 'post'}, class: 'unfollow-btn'
     - else
       = link_to 'Follow', account_follows_path(@user), data: {method: 'post'}, class: 'follow-btn'
   = render 'commons/profile'
