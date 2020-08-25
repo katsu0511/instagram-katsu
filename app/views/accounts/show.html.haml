@@ -5,8 +5,6 @@
     %i.fas.fa-stream
   .profile_image.account_image
     = image_tag @user.icon_image, class: 'profile_icon'
-    = link_to 'Unfollow', account_follow_path(@user), data: {method: 'delete'}, class: 'unfollow-btn hidden'
-    = link_to 'Follow', account_follow_path(@user), data: {method: 'post'}, class: 'follow-btn hidden'
+    .follow-btn.hidden Follow
+    .unfollow-btn.hidden Unfollow
   = render 'commons/profile'
-
-= javascript_pack_tag 'account'
