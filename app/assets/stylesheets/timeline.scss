@@ -52,25 +52,11 @@
         &_images {
             display: flex;
             flex-wrap: wrap;
-            justify-content: flex-end;
             margin-bottom: 13px;
 
             img {
-                margin-bottom: 1%;
-
-                &:first-child {
-                    width: 59%;
-                    overflow: hidden;
-                    margin-right: 1%;
-                }
-
-                &:nth-child(2) {
-                    width: 40%;
-                }
-
-                &:nth-child(3) {
-                    width: 40%;
-                }
+                width: 100%;
+                margin-bottom: 13px;
             }
         }
 
