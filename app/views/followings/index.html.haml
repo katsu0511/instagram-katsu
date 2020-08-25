@@ -1,1 +1,5 @@
-%h1 Hi
+.inner
+  .followings_index
+    - @user.followings.each do |following|
+      = image_tag following.icon_image
+      %p= following.account_name
