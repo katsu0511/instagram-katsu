@@ -10,5 +10,6 @@
     %h2 Following
 .photos_sec
   - user.posts.each do |post|
-    = image_tag post.photos.first
+    = link_to post_path(post) do
+      = image_tag post.photos.first
 .under
