@@ -9,16 +9,7 @@
     = user.following_relationships.count
     %h2 Following
 .photos_sec
-  .photos.photos1
-    .big
-      = image_tag 'photo1'
-    .small
-      = image_tag 'photo2'
-      = image_tag 'photo3'
-  .photos.photos2
-    .small
-      = image_tag 'photo4'
-      = image_tag 'photo5'
-    .big
-      = image_tag 'photo6'
+  - user.posts.each do |post|
+    = link_to post_path(post) do
+      = image_tag post.photos.first
 .under

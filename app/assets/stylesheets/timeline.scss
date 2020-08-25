@@ -50,9 +50,12 @@
         }
 
         &_images {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 13px;
+
             img {
                 width: 100%;
-                height: auto;
                 margin-bottom: 13px;
             }
         }
