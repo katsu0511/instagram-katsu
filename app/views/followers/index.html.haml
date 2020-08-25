@@ -1,4 +1,5 @@
 .inner
+  = link_to 'Profile', profile_path, class: 'to_profile'
   .followers_index
     - @user.followers.each do |follower|
       .follower_account
