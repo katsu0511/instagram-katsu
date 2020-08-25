@@ -1,4 +1,4 @@
-.inner
+.inner#account-show{data: {account_id: @user.id}}
   %h1.account_name= @user.account_name
   = link_to root_path, class: 'to_timeline' do
     %i.fas.fa-arrow-left
