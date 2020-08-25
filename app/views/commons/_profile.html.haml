@@ -2,7 +2,7 @@
   .profile_info.post
     = user.posts.count
     %h2 Posts
-  .profile_info.follower
+  = link_to account_followers_path(user), class: 'profile_info follower' do
     = user.follower_relationships.count
     %h2 Followers
   = link_to account_followings_path(user), class: 'profile_info following' do
