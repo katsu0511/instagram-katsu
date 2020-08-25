@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     $('.follow-btn').on('click', () => {
-      axios.post(`/account/${accountId}/follow`)
+      axios.post(`/accounts/${accountId}/follow`)
         .then((response) => {
           console.log(response)
         })
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     $('.unfollow-btn').on('click', () => {
-      axios.delete(`/account/${accountId}/follow`)
+      axios.delete(`/accounts/${accountId}/follow`)
         .then((response) => {
           console.log(response)
         })
