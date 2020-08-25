@@ -26,7 +26,12 @@
                 width: 30px;
                 height: 30px;
                 margin-right: 8px;
+                
+                img {
+                    border-radius: 50%;
+                }
             }
+
             &_name {
                 font-family: 'Poppins';
 
