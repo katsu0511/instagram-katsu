@@ -128,36 +128,13 @@
         width: 343px;
         margin: 42px auto 0;
 
-        .photos {
-            display: flex;
-            margin-bottom: 8px;
+        img {
+            width: calc(33.3333% - 20px / 3);
+            height: 100px;
+            margin: 0 5px 10px 0;
 
-            .big {
-                width: 207px;
-                height: 192px;
-            }
-
-            .small {
-                width: 128px;
-                height: 92px;
-
-                img {
-                    &:first-child {
-                        margin-bottom: 8px;
-                    }
-                }
-            }
-
-            &.photos1 {
-                .big {
-                    margin-right: 8px;
-                }
-            }
-
-            &.photos2 {
-                .big {
-                    margin-left: 8px;
-                }
+            &:nth-child(3n) {
+                margin-right: 0;
             }
         }
     }
