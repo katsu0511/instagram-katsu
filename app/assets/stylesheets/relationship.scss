@@ -1,0 +1,35 @@
+@import 'variables';
+
+.inner {
+    .followings_index, .followers_index {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+        padding: 31px 0 24px;
+
+        .following_account, .follower_account {
+            display: inline-block;
+
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                img {
+                    width: 40px;
+                    height: 40px;
+                    margin-right: 20px;
+                }
+        
+                p {
+                    font-family: 'Poppins';
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: $base;
+                    line-height: 21px;
+                }
+            }
+        }
+    }
+}
