@@ -44,13 +44,14 @@
     }
 
     .profile_image {
+        display: block;
+        width: 77px;
+        height: 77px;
+        margin: 35px auto 46px;
+
         img {
-            display: block;
-            width: 77px;
-            height: 77px;
             border-radius: 50%;
             box-shadow: 0 0 0 3px white, 0 0 0 6px rgb(255, 0, 140);
-            margin: 35px auto 46px;
             transition: all 0.3s;
 
             &:hover {
