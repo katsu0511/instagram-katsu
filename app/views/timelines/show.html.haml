@@ -7,22 +7,23 @@
       %i.far.fa-user-circle
   
   .timeline_body
-    - @posts.each do |post|
-      .timeline_post#post-show{data: {post_id: post.id}}
-        = link_to account_path(post.user), class: 'timeline_post_top' do
-          .timeline_post_top_icon
-            = image_tag post.user.icon_image
-          .timeline_post_top_name
-            .post_author
-              = post.user.account_name
-            .post_created
-              = post.created_at
-        = link_to post_path(post.id), class: 'timeline_post_images' do
-          - post.photos.each do |photo|
-            = image_tag photo
-        .timeline_post_likes
-          %p.post_likes= post.likes.count
-          %p liked your post
-        .timeline_post_content
-          %p.post_name= post.user.account_name
-          %p.post_content= post.content
+    - @user.each do |user|
+      - user.posts.each do |post|
+        .timeline_post#post-show{data: {post_id: post.id}}
+          = link_to account_path(post.user), class: 'timeline_post_top' do
+            .timeline_post_top_icon
+              = image_tag post.user.icon_image
+            .timeline_post_top_name
+              .post_author
+                = post.user.account_name
+              .post_created
+                = post.created_at
+          = link_to post_path(post.id), class: 'timeline_post_images' do
+            - post.photos.each do |photo|
+              = image_tag photo
+          .timeline_post_likes
+            %p.post_likes= post.likes.count
+            %p liked your post
+          .timeline_post_content
+            %p.post_name= post.user.account_name
+            %p.post_content= post.content
