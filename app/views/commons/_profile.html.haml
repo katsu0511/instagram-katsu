@@ -1,12 +1,12 @@
 .profile_infos
   .profile_info.post
-    %span 44
+    = user.posts.count
     %h2 Posts
   .profile_info.follower
-    %span 110
+    = user.follower_relationships.count
     %h2 Followers
   .profile_info.following
-    %span 44
+    = user.following_relationships.count
     %h2 Following
 .photos_sec
   .photos.photos1

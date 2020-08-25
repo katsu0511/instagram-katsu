@@ -7,5 +7,5 @@
     = image_tag @user.icon_image, class: 'profile_icon'
     .follow-btn.hidden Follow
     .unfollow-btn.hidden Unfollow
-  = render 'commons/profile'
+  = render 'commons/profile', user: @user
 = javascript_pack_tag 'profile'
