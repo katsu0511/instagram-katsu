@@ -17,5 +17,9 @@ class Post < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :comments, dependent: :destroy
 
+  validates :content, presence: true
+  validates :content, length: { minimum: 2, maximum: 140 }
+  validates :content, format: { with: /\A(?!\@)/ }
+
   belongs_to :user
 end
