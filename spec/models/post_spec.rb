@@ -1,12 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  let!(:user) do
-    User.create!({
-      email: 'test@example.com',
-      password: 'password'
-    })
-  end
+  let!(:user) { create(:user) }
 
   context '内容が入力されている場合' do
     let!(:post) do
@@ -16,6 +11,7 @@ RSpec.describe Post, type: :model do
     end
 
     it '投稿を保存できる' do
+      puts user.email
       expect(post).to be_valid
     end
   end
