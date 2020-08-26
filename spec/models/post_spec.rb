@@ -11,7 +11,6 @@ RSpec.describe Post, type: :model do
     end
 
     it '投稿を保存できる' do
-      puts user.email
       expect(post).to be_valid
     end
   end
