@@ -1,0 +1,16 @@
+{
+  "name": "instagram app",
+  "description": "This is instagram-app",
+  "keywords": [],
+  "website": "",
+  "repository": "https://github.com/katsu0511/instagram-katsu",
+  "env": {},
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ],
+  "buildpacks": [{
+    "url": "heroku/nodejs"
+  }, {
+    "url": "heroku/ruby"
+  }]
+}
