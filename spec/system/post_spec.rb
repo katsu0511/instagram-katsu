@@ -10,9 +10,9 @@ RSpec.describe 'Posts', type: :system do
     end
 
     it '記事一覧が表示される' do
-      visit profile_path
+      visit root_path
 
-      expect(page).to have_content(posts.first.content)
+      expect(page).to have_css('.timeline_post_content', text: post.content)
     end
   end
 end
