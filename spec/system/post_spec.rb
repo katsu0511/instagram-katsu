@@ -9,10 +9,13 @@ RSpec.describe 'Posts', type: :system do
       sign_in user
     end
 
-    it '記事一覧が表示される' do
+    it '記事の詳細を表示できる' do
       visit root_path
+      post = posts.first
+      click_on post.photos
 
-      expect(page).to have_css('.timeline_post_content', text: post.content)
+      expect(page).to have_css('.post_author', text: post.user.account_name)
+      expect(page).to have_css('.timeline_post_content', text: post.content.to_plain_text)
     end
   end
 end
