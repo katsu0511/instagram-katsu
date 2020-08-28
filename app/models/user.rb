@@ -63,7 +63,7 @@ class User < ApplicationRecord
     if profile&.icon&.attached?
       profile.icon
     else
-      'default'
+      'default.png'
     end
   end
 
