@@ -8,8 +8,8 @@
       .actions
         = f.submit :Post, class: 'post_btn'
     .user_ui
-      = image_tag @post.user.icon_image
-      %p= @post.user.account_name
+      = image_tag User.first.icon_image
+      %p= User.first.account_name
     .field
       %label.content
         Content
