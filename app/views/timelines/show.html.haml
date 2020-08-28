@@ -5,6 +5,7 @@
     = link_to profile_path do
       %i.fas.fa-arrow-right
       %i.far.fa-user-circle
+    = link_to 'LOG OUT', destroy_user_session_path, data: {method: 'delete'}, class: 'logout_btn'
   
   .timeline_body
     - @user.each do |user|
