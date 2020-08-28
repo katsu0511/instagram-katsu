@@ -1,9 +1,9 @@
 .inner
-  %h1.account_name= current_user.account_name
+  %h1.account_name= @user.account_name
   = link_to root_path, class: 'to_timeline' do
     %i.fas.fa-arrow-left
     %i.fas.fa-stream
   = link_to 'LOG OUT', destroy_user_session_path, data: {method: 'delete'}, class: 'logout_btn'
   = link_to edit_profile_path, class: 'profile_image' do
-    = image_tag current_user.icon_image, class: 'profile_icon'
-  = render 'commons/profile', user: current_user
+    = image_tag @user.icon_image, class: 'profile_icon'
+  = render 'commons/profile', user: @user
