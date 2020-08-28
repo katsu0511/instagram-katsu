@@ -7,9 +7,9 @@
       %h1 Status
       .actions
         = f.submit :Post, class: 'post_btn'
-    -# .user_ui
-      = image_tag current_user.icon_image
-      %p= current_user.account_name
+    .user_ui
+      = image_tag current_user&.icon_image
+      %p= current_user&.account_name
     .field
       %label.content
         Content
