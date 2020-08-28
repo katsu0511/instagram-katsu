@@ -2,7 +2,7 @@ class ProfilesController < ApplicationController
   before_action :forbid_logout_user
 
   def show
-    @user = User.find(1)
+    @profile = current_user.prepare_profile
   end
 
   def edit
