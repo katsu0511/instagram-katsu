@@ -18,8 +18,8 @@
           - @post.photos.each do |photo|
             = image_tag photo
         .share
-          = image_tag 'heart', class: 'hidden active-heart'
-          = image_tag 'unheart', class: 'hidden inactive-heart'
+          = image_tag 'heart.png', class: 'hidden active-heart'
+          = image_tag 'unheart.png', class: 'hidden inactive-heart'
           = link_to post_comments_path(@post.id) do
             %i.far.fa-comment
           = link_to 'https://twitter.com/share?ref_src=twsrc%5Etfw', target: '_blank' do
